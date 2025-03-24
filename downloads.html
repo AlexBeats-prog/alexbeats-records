@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Music | AlexBeats Records</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header select {
+      margin-top: 10px;
+      background-color: #000;
+      color: #00e5ff;
+      border: 1px solid #00e5ff;
+      padding: 5px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .track {
+      background-color: #222;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .track h3 {
+      margin: 0 0 10px 0;
+    }
+    .track p {
+      font-size: 14px;
+      color: #bbb;
+    }
+    .track a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #00e5ff;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .track a:hover {
+      background-color: #00bcd4;
+    }
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+  <script>
+    function changeLang(value) {
+      window.location.href = value;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Download Music</h1>
+    <p>Free to use with credit · Music by AlexBeats Records</p>
+    <select onchange="changeLang(this.value)">
+      <option value="downloads.html" selected>EN</option>
+      <option value="downloads-ru.html">RU</option>
+      <option value="downloads-de.html">DE</option>
+    </select>
+  </header>
+
+  <section>
+    <div class="track">
+      <h3>When Everything Inside Is Silent</h3>
+      <p>Emotional instrumental track for reflection and calm moments.</p>
+      <a href="files/When%20Everything%20Inside%20Is%20Silent.mp3" download>⬇️ Download</a>
+    </div>
+    <div class="track">
+      <h3>When the Water is Silent</h3>
+      <p>Ambient peace by the sea. Perfect for deep moods and videos.</p>
+      <a href="files/When%20the%20Water%20is%20Silent.mp3" download>⬇️ Download</a>
+    </div>
+    <div class="track">
+      <h3>Reflections</h3>
+      <p>Piano-based ambient music for thoughtful visuals or podcasts.</p>
+      <a href="files/Quiet%20Reflections.mp3" download>⬇️ Download</a>
+    </div>
+    <div class="track">
+      <h3>Cello at Sunset</h3>
+      <p>Warm cello with sunset atmosphere. Ideal for emotional content.</p>
+      <a href="files/Sunset%20Cello_.mp3" download>⬇️ Download</a>
+    </div>
+    <div class="track">
+      <h3>Salty Wind</h3>
+      <p>Coastal breeze in music form. Soft, cinematic adagio.</p>
+      <a href="files/Солёный%20ветер.mp3" download>⬇️ Download</a>
+    </div>
+    <div class="track">
+      <h3>Salt</h3>
+      <p>Part of the "Salty" album. Deep and minimalist.</p>
+      <a href="files/Соль%20.mp3" download>⬇️ Download</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 AlexBeats Records — All rights reserved
+  </footer>
+</body>
+</html>
