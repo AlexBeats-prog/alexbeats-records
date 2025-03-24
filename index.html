@@ -2,203 +2,81 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlexBeats Records</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('bg.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: #111;
       color: #fff;
     }
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      min-height: 100vh;
-    }
     nav {
-      background: rgba(0,0,0,0.8);
-      padding: 10px 20px;
+      background: #000;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     nav a {
       color: #00bcd4;
+      margin-right: 20px;
       text-decoration: none;
-      margin-right: 15px;
       font-weight: bold;
-    }
-    nav .lang-toggle {
-      cursor: pointer;
-      color: #ccc;
-      font-size: 14px;
     }
     header {
       text-align: center;
-      padding: 30px 20px 10px;
+      padding: 60px 20px 30px;
     }
-    header img {
-      width: 220px;
-      height: auto;
-      margin-bottom: 10px;
+    header h1 {
+      font-size: 42px;
     }
     header p {
-      font-size: 18px;
+      font-size: 20px;
       color: #ccc;
     }
-    section {
-      max-width: 880px;
-      margin: 30px auto;
-      background-color: rgba(255,255,255,0.06);
-      padding: 25px;
-      border-radius: 12px;
-    }
-    h2 {
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
-    ul {
-      padding-left: 0;
-      list-style: none;
-    }
-    li {
-      margin-bottom: 12px;
-    }
-    button {
-      margin-left: 10px;
-      padding: 6px 10px;
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
       background: #00bcd4;
+      color: #fff;
       border: none;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
     }
-    button:hover {
+    .button:hover {
       background: #0097a7;
     }
-    iframe {
-      width: 100%;
-      height: 315px;
-      margin-top: 20px;
-      border: none;
-    }
     footer {
+      margin-top: 60px;
       text-align: center;
       padding: 20px;
-      color: #aaa;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <nav>
-      <div>
-        <a href="#about" id="navAbout">О</a>
-        <a href="#tracks" id="navTracks">Треки</a>
-        <a href="#license" id="navLicense">Лицензия</a>
-        <a href="#albums" id="navAlbums">Альбомы</a>
-        <a href="#contact" id="navContact">Контакт</a>
-      </div>
-      <div class="lang-toggle" onclick="toggleLang()">EN | RU</div>
-    </nav>
 
-    <header>
-      <img src="logo.png" alt="AlexBeats Records Logo" />
-      <p id="subtitle">Инструментальная музыка для видео, подкастов и творческих проектов</p>
-    </header>
+  <nav>
+    <div>
+      <a href="#about">О проекте</a>
+      <a href="downloads.html">Скачать</a>
+    </div>
+    <div>
+      <a href="https://www.youtube.com/@AlexBeatsRecords" target="_blank">YouTube</a>
+    </div>
+  </nav>
 
-    <section id="about">
-      <h2 id="aboutTitle">О</h2>
-      <p id="aboutText">AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции.</p>
-    </section>
+  <header>
+    <h1>AlexBeats Records</h1>
+    <p>Инструментальная музыка для видео, подкастов и творческих проектов</p>
+    <a class="button" href="downloads.html">🎧 Скачать музыку</a>
+  </header>
 
-    <section id="tracks">
-      <h2 id="tracksTitle">Избранные треки</h2>
-      <ul>
-        <li>Reflections
-          <button onclick="window.open('https://youtu.be/REXjVVChYzA')">Слушать</button>
-          <a href="files/reflections.mp3" download><button>Скачать</button></a>
-          <a href="files/reflections_with_credit.mp3" download><button>Скачать с авторством</button></a>
-        </li>
-        <li>When the Water is Silent
-          <button onclick="window.open('https://youtu.be/Ta5kDlaeTis')">Слушать</button>
-          <a href="files/when_the_water_is_silent.mp3" download><button>Скачать</button></a>
-          <a href="files/when_the_water_is_silent_with_credit.mp3" download><button>Скачать с авторством</button></a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>YouTube</h2>
-      <iframe src="https://www.youtube.com/embed/8vlRfL8DZRw" allowfullscreen></iframe>
-    </section>
-
-    <section id="license">
-      <h2 id="licenseTitle">Лицензия</h2>
-      <p id="licenseText">Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.</p>
-      <p><strong>Пожалуйста, укажите авторство:</strong><br>
-      Music by AlexBeats Records — https://www.youtube.com/@AlexBeatsRecords</p>
-    </section>
-
-    <section id="albums">
-      <h2 id="albumsTitle">Альбомы</h2>
-      <p id="albumsText">Скоро: «Salty», «Frozen Light» — инструментальные путешествия для вашего творчества.</p>
-    </section>
-
-    <section id="contact">
-      <h2 id="contactTitle">Контакт</h2>
-      <p>Email: <a href="mailto:alexbeats.contact@gmail.com" style="color:#00bcd4;">alexbeats.contact@gmail.com</a></p>
-    </section>
-
-    <footer>&copy; 2025 AlexBeats Records. Все права защищены.</footer>
-  </div>
-
-  <script>
-    let lang = 'ru';
-    function toggleLang() {
-      lang = lang === 'ru' ? 'en' : 'ru';
-      const data = {
-        ru: {
-          subtitle: 'Инструментальная музыка для видео, подкастов и творческих проектов',
-          navAbout: 'О',
-          navTracks: 'Треки',
-          navLicense: 'Лицензия',
-          navAlbums: 'Альбомы',
-          navContact: 'Контакт',
-          aboutTitle: 'О',
-          aboutText: 'AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции.',
-          tracksTitle: 'Избранные треки',
-          licenseTitle: 'Лицензия',
-          licenseText: 'Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.',
-          albumsTitle: 'Альбомы',
-          albumsText: 'Скоро: «Salty», «Frozen Light» — инструментальные путешествия для вашего творчества.',
-          contactTitle: 'Контакт'
-        },
-        en: {
-          subtitle: 'Instrumental music for videos, podcasts & creative projects',
-          navAbout: 'About',
-          navTracks: 'Tracks',
-          navLicense: 'License',
-          navAlbums: 'Albums',
-          navContact: 'Contact',
-          aboutTitle: 'About',
-          aboutText: 'AlexBeats Records is an independent music project focused on ambient, cinematic and emotional instrumental compositions.',
-          tracksTitle: 'Featured Tracks',
-          licenseTitle: 'License',
-          licenseText: 'All tracks are free to use in videos, podcasts, and creative projects with proper credit.',
-          albumsTitle: 'Albums',
-          albumsText: 'Coming soon: “Salty”, “Frozen Light” — curated instrumental journeys for your creative work.',
-          contactTitle: 'Contact'
-        }
-      };
-      const d = data[lang];
-      for (const id in d) {
-        const el = document.getElementById(id);
-        if (el) el.innerText = d[id];
-      }
-    }
-  </script>
+  <footer>&copy; 2025 AlexBeats Records</footer>
 </body>
 </html>
