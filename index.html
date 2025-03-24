@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AlexBeats Records</title>
   <style>
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -15,13 +14,30 @@
       color: #fff;
     }
     .overlay {
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
-      padding-bottom: 40px;
+    }
+    nav {
+      background: rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    nav .lang-toggle {
+      cursor: pointer;
+      color: #ccc;
+      font-size: 14px;
     }
     header {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 30px 20px 10px;
     }
     header img {
       width: 220px;
@@ -29,30 +45,30 @@
       margin-bottom: 10px;
     }
     header p {
-      font-size: 20px;
-      color: #ddd;
+      font-size: 18px;
+      color: #ccc;
     }
     section {
       max-width: 880px;
-      margin: 40px auto;
+      margin: 30px auto;
       background-color: rgba(255,255,255,0.06);
-      padding: 30px;
+      padding: 25px;
       border-radius: 12px;
     }
     h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 26px;
+      margin-bottom: 15px;
     }
     ul {
       padding-left: 0;
       list-style: none;
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     button {
       margin-left: 10px;
-      padding: 5px 10px;
+      padding: 6px 10px;
       background: #00bcd4;
       border: none;
       color: white;
@@ -77,25 +93,40 @@
 </head>
 <body>
   <div class="overlay">
+    <nav>
+      <div>
+        <a href="#about" id="navAbout">О</a>
+        <a href="#tracks" id="navTracks">Треки</a>
+        <a href="#license" id="navLicense">Лицензия</a>
+        <a href="#albums" id="navAlbums">Альбомы</a>
+        <a href="#contact" id="navContact">Контакт</a>
+      </div>
+      <div class="lang-toggle" onclick="toggleLang()">EN | RU</div>
+    </nav>
+
     <header>
       <img src="logo.png" alt="AlexBeats Records Logo" />
-      <p>Instrumental Music for Videos, Podcasts & Creative Projects</p>
+      <p id="subtitle">Инструментальная музыка для видео, подкастов и творческих проектов</p>
     </header>
 
-    <section>
-      <h2>О</h2>
-      <p>AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции. Идеально подходит для создателей, рассказчиков, режиссеров и тех, кто ищет вдохновляющую фоновую музыку.</p>
+    <section id="about">
+      <h2 id="aboutTitle">О</h2>
+      <p id="aboutText">AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции.</p>
     </section>
 
-    <section>
-      <h2>Избранные треки</h2>
+    <section id="tracks">
+      <h2 id="tracksTitle">Избранные треки</h2>
       <ul>
-        <li>When Everything Inside Is Silent <button onclick="window.open('https://youtu.be/8vlRfL8DZRw')">Слушать</button></li>
-        <li>When the Water is Silent / Когда вода молчит <button onclick="window.open('https://youtu.be/Ta5kDlaeTis')">Слушать</button></li>
-        <li>Reflections | Ambient Piano Music <button onclick="window.open('https://youtu.be/REXjVVChYzA')">Слушать</button></li>
-        <li>Cello at Sunset / Виолончель на закате <button onclick="window.open('https://youtu.be/KuN99PjOIXw')">Слушать</button></li>
-        <li>Salty Wind / Солёный ветер <button onclick="window.open('https://youtu.be/gjn1NstD8HA')">Слушать</button></li>
-        <li>Salt / Соль <button onclick="window.open('https://youtu.be/wmbOum_q_3I')">Слушать</button></li>
+        <li>Reflections
+          <button onclick="window.open('https://youtu.be/REXjVVChYzA')">Слушать</button>
+          <a href="files/reflections.mp3" download><button>Скачать</button></a>
+          <a href="files/reflections_with_credit.mp3" download><button>Скачать с авторством</button></a>
+        </li>
+        <li>When the Water is Silent
+          <button onclick="window.open('https://youtu.be/Ta5kDlaeTis')">Слушать</button>
+          <a href="files/when_the_water_is_silent.mp3" download><button>Скачать</button></a>
+          <a href="files/when_the_water_is_silent_with_credit.mp3" download><button>Скачать с авторством</button></a>
+        </li>
       </ul>
     </section>
 
@@ -104,24 +135,70 @@
       <iframe src="https://www.youtube.com/embed/8vlRfL8DZRw" allowfullscreen></iframe>
     </section>
 
-    <section>
-      <h2>Лицензия</h2>
-      <p>Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.</p>
+    <section id="license">
+      <h2 id="licenseTitle">Лицензия</h2>
+      <p id="licenseText">Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.</p>
       <p><strong>Пожалуйста, укажите авторство:</strong><br>
       Music by AlexBeats Records — https://www.youtube.com/@AlexBeatsRecords</p>
     </section>
 
-    <section>
-      <h2>Альбомы</h2>
-      <p>Скоро: изучите полные альбомы, такие как «Salty» и «Frozen Light» — тщательно отобранные инструментальные путешествия для вашего творчества.</p>
+    <section id="albums">
+      <h2 id="albumsTitle">Альбомы</h2>
+      <p id="albumsText">Скоро: «Salty», «Frozen Light» — инструментальные путешествия для вашего творчества.</p>
     </section>
 
-    <section>
-      <h2>Контакт</h2>
+    <section id="contact">
+      <h2 id="contactTitle">Контакт</h2>
       <p>Email: <a href="mailto:alexbeats.contact@gmail.com" style="color:#00bcd4;">alexbeats.contact@gmail.com</a></p>
     </section>
 
     <footer>&copy; 2025 AlexBeats Records. Все права защищены.</footer>
   </div>
+
+  <script>
+    let lang = 'ru';
+    function toggleLang() {
+      lang = lang === 'ru' ? 'en' : 'ru';
+      const data = {
+        ru: {
+          subtitle: 'Инструментальная музыка для видео, подкастов и творческих проектов',
+          navAbout: 'О',
+          navTracks: 'Треки',
+          navLicense: 'Лицензия',
+          navAlbums: 'Альбомы',
+          navContact: 'Контакт',
+          aboutTitle: 'О',
+          aboutText: 'AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции.',
+          tracksTitle: 'Избранные треки',
+          licenseTitle: 'Лицензия',
+          licenseText: 'Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.',
+          albumsTitle: 'Альбомы',
+          albumsText: 'Скоро: «Salty», «Frozen Light» — инструментальные путешествия для вашего творчества.',
+          contactTitle: 'Контакт'
+        },
+        en: {
+          subtitle: 'Instrumental music for videos, podcasts & creative projects',
+          navAbout: 'About',
+          navTracks: 'Tracks',
+          navLicense: 'License',
+          navAlbums: 'Albums',
+          navContact: 'Contact',
+          aboutTitle: 'About',
+          aboutText: 'AlexBeats Records is an independent music project focused on ambient, cinematic and emotional instrumental compositions.',
+          tracksTitle: 'Featured Tracks',
+          licenseTitle: 'License',
+          licenseText: 'All tracks are free to use in videos, podcasts, and creative projects with proper credit.',
+          albumsTitle: 'Albums',
+          albumsText: 'Coming soon: “Salty”, “Frozen Light” — curated instrumental journeys for your creative work.',
+          contactTitle: 'Contact'
+        }
+      };
+      const d = data[lang];
+      for (const id in d) {
+        const el = document.getElementById(id);
+        if (el) el.innerText = d[id];
+      }
+    }
+  </script>
 </body>
 </html>
