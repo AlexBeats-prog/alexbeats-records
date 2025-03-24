@@ -6,176 +6,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AlexBeats Records</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
     }
-    header {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: rgba(0,0,0,0.6);
-      position: relative;
+    .overlay {
+      background: rgba(0, 0, 0, 0.65);
+      min-height: 100vh;
+      padding-bottom: 40px;
     }
-    header h1 {
-      font-size: 48px;
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+    header img {
+      width: 220px;
+      height: auto;
       margin-bottom: 10px;
     }
     header p {
       font-size: 20px;
-      color: #ccc;
+      color: #ddd;
     }
     section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(0,0,0,0.6);
-      border-radius: 10px;
-      margin-bottom: 20px;
+      max-width: 880px;
+      margin: 40px auto;
+      background-color: rgba(255,255,255,0.06);
+      padding: 30px;
+      border-radius: 12px;
     }
     h2 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 20px;
     }
-    a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
     ul {
-      list-style: none;
       padding-left: 0;
+      list-style: none;
     }
     li {
       margin-bottom: 10px;
     }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #222;
-      color: #fff;
-      border: 1px solid #444;
+    button {
+      margin-left: 10px;
       padding: 5px 10px;
+      background: #00bcd4;
+      border: none;
+      color: white;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 14px;
+    }
+    button:hover {
+      background: #0097a7;
     }
     iframe {
-      border: none;
-      margin-top: 20px;
       width: 100%;
-      max-width: 560px;
       height: 315px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 20px;
+      border: none;
     }
     footer {
-      background: rgba(0,0,0,0.7);
-      padding: 30px 20px;
       text-align: center;
-      color: #ccc;
+      padding: 20px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 id="title">AlexBeats Рекорды</h1>
-    <p id="subtitle">Инструментальная музыка для видео, подкастов и творческих проектов</p>
-    <button class="lang-toggle" onclick="toggleLang()">EN | RU</button>
-    <audio autoplay loop>
-      <source src="background-music.mp3" type="audio/mpeg">
-    </audio>
-  </header>
+  <div class="overlay">
+    <header>
+      <img src="logo.png" alt="AlexBeats Records Logo" />
+      <p>Instrumental Music for Videos, Podcasts & Creative Projects</p>
+    </header>
 
-  <section>
-    <h2 id="aboutTitle">О</h2>
-    <p id="aboutText">AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции. Идеально подходит для создателей, рассказчиков, режиссеров и тех, кто ищет вдохновляющую фоновую музыку.</p>
-  </section>
+    <section>
+      <h2>О</h2>
+      <p>AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции. Идеально подходит для создателей, рассказчиков, режиссеров и тех, кто ищет вдохновляющую фоновую музыку.</p>
+    </section>
 
-  <section>
-    <h2 id="tracksTitle">Избранные треки</h2>
-    <ul>
-      <li><span id="track1">Размышления</span> <button onclick="window.open('https://youtu.be/sample1')">Слушать</button></li>
-      <li><span id="track2">Когда Внутри Все Молчит</span> <button onclick="window.open('https://youtu.be/sample2')">Слушать</button></li>
-      <li><span id="track3">Замороженные Шепоты</span> <button onclick="window.open('https://youtu.be/sample3')">Слушать</button></li>
-      <li><span id="track4">Соленый Ветер</span> <button onclick="window.open('https://youtu.be/sample4')">Слушать</button></li>
-      <li><span id="track5">Морозное утро</span> <button onclick="window.open('https://youtu.be/sample5')">Слушать</button></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Избранные треки</h2>
+      <ul>
+        <li>Размышления <button onclick="window.open('https://youtu.be/sample1')">Слушать</button></li>
+        <li>Когда Внутри Все Молчит <button onclick="window.open('https://youtu.be/sample2')">Слушать</button></li>
+        <li>Замороженные Шепоты <button onclick="window.open('https://youtu.be/sample3')">Слушать</button></li>
+        <li>Соленый Ветер <button onclick="window.open('https://youtu.be/sample4')">Слушать</button></li>
+        <li>Морозное утро <button onclick="window.open('https://youtu.be/sample5')">Слушать</button></li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>YouTube</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PL_SAMPLE" allowfullscreen></iframe>
-  </section>
+    <section>
+      <h2>YouTube</h2>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PL_SAMPLE" allowfullscreen></iframe>
+    </section>
 
-  <section>
-    <h2 id="licenseTitle">Лицензия</h2>
-    <p id="licenseText">Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.</p>
-    <p><strong>Пожалуйста, укажите авторство:</strong><br>
-    Music by AlexBeats Records — https://www.youtube.com/@AlexBeatsRecords</p>
-  </section>
+    <section>
+      <h2>Лицензия</h2>
+      <p>Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.</p>
+      <p><strong>Пожалуйста, укажите авторство:</strong><br>
+      Music by AlexBeats Records — https://www.youtube.com/@AlexBeatsRecords</p>
+    </section>
 
-  <section>
-    <h2 id="albumsTitle">Альбомы</h2>
-    <p id="albumsText">Скоро: изучите полные альбомы, такие как «Salty» и «Frozen Light» — тщательно отобранные инструментальные путешествия для вашего творчества.</p>
-  </section>
+    <section>
+      <h2>Альбомы</h2>
+      <p>Скоро: изучите полные альбомы, такие как «Salty» и «Frozen Light» — тщательно отобранные инструментальные путешествия для вашего творчества.</p>
+    </section>
 
-  <section>
-    <h2 id="contactTitle">Контакт</h2>
-    <p>Email: <a href="mailto:alexbeats.contact@gmail.com">alexbeats.contact@gmail.com</a></p>
-  </section>
+    <section>
+      <h2>Контакт</h2>
+      <p>Email: <a href="mailto:alexbeats.contact@gmail.com" style="color:#00bcd4;">alexbeats.contact@gmail.com</a></p>
+    </section>
 
-  <footer>
-    &copy; 2025 AlexBeats Records. Все права защищены.
-  </footer>
-
-  <script>
-    let lang = 'ru';
-    function toggleLang() {
-      lang = lang === 'ru' ? 'en' : 'ru';
-      const data = {
-        ru: {
-          title: 'AlexBeats Рекорды',
-          subtitle: 'Инструментальная музыка для видео, подкастов и творческих проектов',
-          aboutTitle: 'О',
-          aboutText: 'AlexBeats Records — независимый музыкальный проект, ориентированный на эмбиентные, кинематографические и эмоциональные инструментальные композиции. Идеально подходит для создателей, рассказчиков, режиссеров и тех, кто ищет вдохновляющую фоновую музыку.',
-          tracksTitle: 'Избранные треки',
-          track1: 'Размышления',
-          track2: 'Когда Внутри Все Молчит',
-          track3: 'Замороженные Шепоты',
-          track4: 'Соленый Ветер',
-          track5: 'Морозное утро',
-          licenseTitle: 'Лицензия',
-          licenseText: 'Все треки можно свободно использовать в видео, подкастах и ​​творческих проектах при условии указания авторства.',
-          albumsTitle: 'Альбомы',
-          albumsText: 'Скоро: изучите полные альбомы, такие как «Salty» и «Frozen Light» — тщательно отобранные инструментальные путешествия для вашего творчества.',
-          contactTitle: 'Контакт'
-        },
-        en: {
-          title: 'AlexBeats Records',
-          subtitle: 'Instrumental music for videos, podcasts, and creative projects',
-          aboutTitle: 'About',
-          aboutText: 'AlexBeats Records is an independent music project focused on ambient, cinematic, and emotional instrumental compositions. Perfect for creators, storytellers, filmmakers, and those seeking inspiring background music.',
-          tracksTitle: 'Featured Tracks',
-          track1: 'Reflections',
-          track2: 'When Everything Inside Is Silent',
-          track3: 'Frozen Whispers',
-          track4: 'Salty Wind',
-          track5: 'Frosted Morning',
-          licenseTitle: 'License',
-          licenseText: 'All tracks are free to use in videos, podcasts, and creative projects with proper credit.',
-          albumsTitle: 'Albums',
-          albumsText: 'Coming soon: explore full albums like “Salty” and “Frozen Light” — curated instrumental journeys for your creative work.',
-          contactTitle: 'Contact'
-        }
-      };
-      const d = data[lang];
-      for (const id in d) {
-        document.getElementById(id).innerText = d[id];
-      }
-    }
-  </script>
+    <footer>&copy; 2025 AlexBeats Records. Все права защищены.</footer>
+  </div>
 </body>
 </html>
