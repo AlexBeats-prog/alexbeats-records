@@ -1,22 +1,22 @@
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AlexBeats Records</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('When Everything Inside Is Silent.jpg') no-repeat center center fixed;
+      font-family: Arial, sans-serif;
+      background: url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
+      backdrop-filter: brightness(0.7);
     }
     header {
+      padding: 60px 20px;
       text-align: center;
-      padding: 100px 20px 40px;
-      background: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
     }
     header h1 {
       font-size: 48px;
@@ -26,36 +26,95 @@
       font-size: 20px;
       color: #ccc;
     }
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 24px;
-      background: #00bcd4;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 5px;
-      font-weight: bold;
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
     }
-    .button:hover {
-      background: #0097a7;
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #00e5ff;
+      text-decoration: none;
+    }
+    .tracklist ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tracklist li {
+      margin-bottom: 15px;
+    }
+    .tracklist button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #00e5ff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .tracklist button:hover {
+      background-color: #00bcd4;
+    }
+    .player {
+      text-align: center;
+      margin-top: 40px;
+    }
+    iframe {
+      border: none;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
     }
     footer {
-      margin-top: 60px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px 20px;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      background: rgba(0, 0, 0, 0.6);
       color: #aaa;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="AlexBeats Records" style="max-width: 240px;" />
     <h1>AlexBeats Records</h1>
     <p>Instrumental Music for Videos, Podcasts & Creative Projects</p>
-    <a class="button" href="downloads.html">🎧 Скачать музыку</a>
   </header>
-  <footer>&copy; 2025 AlexBeats Records</footer>
+
+  <section class="tracklist">
+    <h2>Featured Tracks</h2>
+    <ul>
+      <li>When Everything Inside Is Silent <button onclick="window.open('https://youtu.be/8vlRfL8DZRw')">🎧 Listen</button></li>
+      <li>When the Water is Silent / Когда вода молчит <button onclick="window.open('https://youtu.be/Ta5kDlaeTis')">🎧 Listen</button></li>
+      <li>Reflections | Ambient Piano Music <button onclick="window.open('https://youtu.be/REXjVVChYzA')">🎧 Listen</button></li>
+      <li>Cello at Sunset / Виолончель на закате <button onclick="window.open('https://youtu.be/KuN99PjOIXw')">🎧 Listen</button></li>
+      <li>Salty Wind / Солёный ветер <button onclick="window.open('https://youtu.be/gjn1NstD8HA')">🎧 Listen</button></li>
+      <li>Salt / Соль <button onclick="window.open('https://youtu.be/wmbOum_q_3I')">🎧 Listen</button></li>
+    </ul>
+    <p>More on our <a href="https://www.youtube.com/@AlexBeatsRecords" target="_blank">YouTube channel</a>.</p>
+  </section>
+
+  <section class="player">
+    <h2>YouTube Player</h2>
+    <iframe src="https://www.youtube.com/embed/8vlRfL8DZRw" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>License</h2>
+    <p>All tracks are free to use in videos, podcasts, and creative projects with proper credit.</p>
+    <p><strong>Please credit as:</strong><br>
+    Music by AlexBeats Records — https://www.youtube.com/@AlexBeatsRecords</p>
+  </section>
+
+  <footer>
+    &copy; 2025 AlexBeats Records. All rights reserved.
+  </footer>
 </body>
 </html>
